@@ -165,6 +165,7 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
             break;
         case PowerHint_1_0::SUSTAINED_PERFORMANCE:
             if (data && !mSustainedPerfModeOn) {
+                ALOGD("SUSTAINED_PERFORMANCE ON");
                 if (!mVRModeOn) { // Sustained mode only.
                     mHintManager->DoHint("SUSTAINED_PERFORMANCE");
                 } else { // Sustained + VR mode.
@@ -173,6 +174,7 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
                 }
                 mSustainedPerfModeOn = true;
             } else if (!data && mSustainedPerfModeOn) {
+                ALOGD("SUSTAINED_PERFORMANCE OFF");
                 mHintManager->EndHint("VR_SUSTAINED_PERFORMANCE");
                 mHintManager->EndHint("SUSTAINED_PERFORMANCE");
                 if (mVRModeOn) { // Switch back to VR Mode.
@@ -183,6 +185,7 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
             break;
         case PowerHint_1_0::VR_MODE:
             if (data && !mVRModeOn) {
+                ALOGD("VR_MODE ON");
                 if (!mSustainedPerfModeOn) { // VR mode only.
                     mHintManager->DoHint("VR_MODE");
                 } else { // Sustained + VR mode.
@@ -191,6 +194,7 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
                 }
                 mVRModeOn = true;
             } else if (!data && mVRModeOn) {
+                ALOGD("VR_MODE OFF");
                 mHintManager->EndHint("VR_SUSTAINED_PERFORMANCE");
                 mHintManager->EndHint("VR_MODE");
                 if (mSustainedPerfModeOn) { // Switch back to sustained Mode.
