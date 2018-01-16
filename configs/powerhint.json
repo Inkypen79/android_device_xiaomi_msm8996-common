@@ -294,7 +294,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "ValueIndex": 0,
-      "Duration": 0
+      "Duration": 5000
     },
     {
       "PowerHint": "LAUNCH",
@@ -342,7 +342,7 @@
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "ValueIndex": 0,
-      "Duration": 0
+      "Duration": 1000
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -366,7 +366,7 @@
       "PowerHint": "CAMERA_STREAMING",
       "Node": "CPUBigClusterMaxFreq",
       "ValueIndex": 0,
-      "Duration": 0
+      "Duration": 1000
     },
     {
       "PowerHint": "CAMERA_STREAMING",
@@ -390,7 +390,7 @@
       "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMaxFreq",
       "ValueIndex": 0,
-      "Duration": 0
+      "Duration": 1000
     },
     {
       "PowerHint": "CAMERA_SHOT",
