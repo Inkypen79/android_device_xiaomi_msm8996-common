@@ -27,7 +27,6 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.internal.util.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
