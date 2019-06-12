@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.power.rc \
     init.qcom.usb.rc \
+    init.safailnet.rc \
     ueventd.qcom.rc
 
 # Display
