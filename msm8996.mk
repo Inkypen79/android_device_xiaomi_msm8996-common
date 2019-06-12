@@ -257,9 +257,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_8996
 
-# LiveDisplay
+# LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+    libjni_livedisplay
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -360,10 +360,6 @@ PRODUCT_BOOT_JARS += \
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
