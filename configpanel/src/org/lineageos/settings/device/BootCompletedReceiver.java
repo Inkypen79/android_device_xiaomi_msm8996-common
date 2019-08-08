@@ -26,8 +26,6 @@ import android.content.SharedPreferences;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
-
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final String TAG = BootCompletedReceiver.class.getSimpleName();
