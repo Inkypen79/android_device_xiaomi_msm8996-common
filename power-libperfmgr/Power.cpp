@@ -231,7 +231,7 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
 Return<void> Power::setFeature(Feature feature, bool activate)  {
     if (feature == Feature::POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
         ALOGV("%s: %s double tap to wake", __func__, activate ? "enabling" : "disabling");
-        ::android::base::WriteStringToFile(activate ? "1" : "0", DT2W_PATH);
+        ::android::base::WriteStringToFile(activate ? "1" : "0", DT2W_PATH, true);
     }
     return Void();
 }
