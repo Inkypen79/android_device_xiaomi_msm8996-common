@@ -1,6 +1,11 @@
 # eBPF
 ro.bpf.kver_override=5.4.299
 
+# Enable blurs, hidden under dev option
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+persist.sys.sf.disable_blurs=1
+
 # IMS
 ro.telephony.block_binder_thread_on_incoming_calls=false
 
