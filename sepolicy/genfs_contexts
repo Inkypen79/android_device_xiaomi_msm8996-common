@@ -1,4 +1,5 @@
 genfscon debugfs /rmt_storage u:object_r:debugfs_rmt:s0
+genfscon debugfs /system_stats         u:object_r:debugfs_rpm:s0
 
 genfscon proc /buttons       u:object_r:proc_buttons:s0
 genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
