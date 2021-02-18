@@ -48,7 +48,7 @@
 #endif
 
 #ifndef WLAN_POWER_STAT
-#define WLAN_POWER_STAT "/d/wlan0/power_stats"
+#define WLAN_POWER_STAT "/d/wlan_wcnss/power_stats"
 #endif
 
 #define ARRAY_SIZE(x) (sizeof((x))/sizeof((x)[0]))
