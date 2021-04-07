@@ -493,6 +493,10 @@ etc/permissions/org.simalliance.openmobileapi.xml
 framework/org.simalliance.openmobileapi.jar
 -priv-app/SmartcardService/SmartcardService.apk
 
+# Perf - from Taimen - RP1A.201005.004.A1
+vendor/lib64/libqti-perfd-client.so|cd3def30b6d444430ea8cea8956623d9d165eb7a
+vendor/lib/libqti-perfd-client.so|08b0cd20dbc79645ee73ea4fdc5221d41d09588a
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
