@@ -393,6 +393,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Qcom soong namespace
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/msm8996-r
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/msm8996-common \
