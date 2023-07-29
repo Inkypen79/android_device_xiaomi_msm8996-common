@@ -156,6 +156,7 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.recovery.rc \
     init.qcom.usb.rc \
+    init.uclamp.rc \
     ueventd.qcom.rc
 
 # Configstore
