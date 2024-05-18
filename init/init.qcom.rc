@@ -298,6 +298,9 @@ on property:sys.boot_completed=1
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
