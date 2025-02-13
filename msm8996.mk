@@ -392,6 +392,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.basic
