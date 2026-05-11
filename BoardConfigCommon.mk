@@ -120,6 +120,11 @@ TARGET_USES_ION := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
+TARGET_FILE_SYSTEM_TYPE ?= ext4
+ifeq ($(WITH_GMS),true)
+TARGET_FILE_SYSTEM_TYPE := erofs
+endif
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
@@ -135,7 +140,7 @@ endif
 ALL_PARTITIONS := product system system_ext odm vendor
 
 $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
-    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := $(TARGET_FILE_SYSTEM_TYPE)) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := system cust
