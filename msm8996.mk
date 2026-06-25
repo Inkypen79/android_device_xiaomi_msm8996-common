@@ -158,10 +158,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Device settings
 PRODUCT_PACKAGES += \
     XiaomiParts
