@@ -240,6 +240,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/msm8996-tasha-mtp-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/msm8996-tasha-mtp-snd-card_Button_Jack.kl \
     $(LOCAL_PATH)/keylayout/qpnp_pon.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qpnp_pon.kl
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
