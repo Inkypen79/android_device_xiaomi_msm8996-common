@@ -175,6 +175,8 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     vendor.qti.hardware.memtrack-service
 
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
 
