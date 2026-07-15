@@ -4,6 +4,9 @@
 //
 
 soong_namespace {
+    imports: [
+        "hardware/qcom-caf/msm8996",
+    ],
 }
 
 install_symlink {

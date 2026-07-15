@@ -1,0 +1,98 @@
+cc_library_headers {
+    name: "camera_common_headers",
+    export_include_dirs: ["stack/common"],
+}
+
+cc_library_shared {
+    name: "camera.msm8996",
+    vendor: true,
+    relative_install_path: "hw",
+    compile_multilib: "32",
+
+    srcs: [
+        "util/QCameraBufferMaps.cpp",
+        "util/QCameraCmdThread.cpp",
+        "util/QCameraFlash.cpp",
+        "util/QCameraPerf.cpp",
+        "util/QCameraQueue.cpp",
+        "util/QCameraDisplay.cpp",
+        "util/QCameraCommon.cpp",
+        "QCamera2Hal.cpp",
+        "QCamera2Factory.cpp",
+        "HAL3/QCamera3HWI.cpp",
+        "HAL3/QCamera3Mem.cpp",
+        "HAL3/QCamera3Stream.cpp",
+        "HAL3/QCamera3Channel.cpp",
+        "HAL3/QCamera3VendorTags.cpp",
+        "HAL3/QCamera3PostProc.cpp",
+        "HAL3/QCamera3CropRegionMapper.cpp",
+        "HAL3/QCamera3StreamMem.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+        "-Wno-compound-token-split-by-macro",
+        "-DQCAMERA_HAL3_SUPPORT",
+        "-DSYSTEM_HEADER_PREFIX=sys",
+        "-DHAS_MULTIMEDIA_HINTS",
+        "-D_ANDROID",
+        "-DUSE_MEDIA_EXTENSIONS",
+        "-DUSE_DISPLAY_SERVICE",
+        "-DDEFAULT_DENOISE_MODE_ON",
+        "-DHAL3",
+        "-DQCAMERA_REDEFINE_LOG",
+        "-DVENUS_PRESENT",
+        "-DUBWC_PRESENT",
+    ],
+
+    local_include_dirs: [
+        "util",
+        "HAL3",
+        "HAL",
+    ],
+
+    include_dirs: [
+        "hardware/qcom-caf/msm8996/media/libstagefrighthw",
+        "hardware/qcom-caf/msm8996/media/mm-core/inc",
+        "hardware/qcom-caf/msm8996/display/libqservice",
+    ],
+
+    header_libs: [
+        "generated_kernel_headers",
+        "camera_common_headers",
+        "display_headers",
+        "media_plugin_headers",
+        "libandroid_sensor_headers",
+        "libcutils_headers",
+        "libmmcamera_interface_headers",
+        "libqexif_headers",
+        "libqomx_core_headers",
+        "libsystem_headers",
+        "libhardware_headers",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libhardware",
+        "libutils",
+        "libcutils",
+        "libdl",
+        "libsync",
+        "libmmcamera_interface",
+        "libmmjpeg_interface",
+        "libui",
+        "libcamera_metadata",
+        "libqdMetaData",
+        "libqservice",
+        "libbinder",
+        "android.frameworks.displayservice@1.0",
+        "libhidlbase",
+    ],
+
+    static_libs: [
+        "android.hardware.camera.common@1.0-helper",
+    ],
+}
