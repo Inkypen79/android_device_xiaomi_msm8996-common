@@ -88,7 +88,7 @@ cc_library_shared {
         "libqdMetaData",
         "libqservice",
         "libbinder",
-        "android.frameworks.displayservice@1.0",
+        "lineage.frameworks.displayservice@1.0",
         "libhidlbase",
     ],
 
